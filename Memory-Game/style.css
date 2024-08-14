@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(100deg, #5d3fd3, rgb(0, 0, 0));
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: #1f242d;
+  padding: 40px 60px;
+}
+
+h2 {
+  font-size: 3em;
+  color: whitesmoke;
+  letter-spacing: 0.1em;
+  cursor: not-allowed;
+}
+
+.reset {
+  padding: 15px 20px;
+  color: #1f242d;
+  background: #b39fff;
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.reset:hover {
+  background: #d8d1f7;
+}
+
+.reset:focus {
+  color: whitesmoke;
+  background: dodgerblue;
+}
+
+.game {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  padding: auto;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: whitesmoke;
+  transition: 0.25s;
+  margin-left: 5px;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #b39fff;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.boxOpen:after,
+.boxMatch:after {
+  transform: rotateY(180deg);
+}
+
+.timer {
+  font-size: 30px;
+  color: white;
+  cursor: not-allowed;
+}

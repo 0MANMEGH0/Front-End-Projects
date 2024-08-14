@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>MEMORY GAME</h2>
+      <div class="game"></div>
+      <div class="timer">Time : <span id="time">0</span> seconds</div>
+      <button class="reset" onclick="window.location.reload();">
+        RESET GAME
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
